@@ -1,0 +1,983 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0" name="viewport"/><meta content="web_standard" name="shell-type"/><title>NETPIX // ARCADE STREAMING CABINET</title><link href="https://fonts.googleapis.com" rel="preconnect"/><link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/><link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;700&amp;family=Space+Mono:wght@400;700&amp;display=swap" rel="stylesheet"/><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/><style>@layer base{html,body{margin:0;padding:0;}body{overscroll-behavior:none;}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}@keyframes crt-flicker{0%{opacity:0.97;}50%{opacity:1;}100%{opacity:0.98;}}@keyframes pixel-blink{0%,49%{opacity:1;}50%,100%{opacity:0;}}.arcade-scanlines{background:linear-gradient(rgba(18,16,16,0) 50%,rgba(0,0,0,0.25) 50%),linear-gradient(90deg,rgba(255,0,0,0.06),rgba(0,255,0,0.02),rgba(0,0,255,0.06));background-size:100% 4px,6px 100%;pointer-events:none;}.pixel-cursor{animation:pixel-blink 1s step-start infinite;}</style><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config={"darkMode":"class","theme":{"extend":{"colors":{"on-primary-fixed-variant":"#930007","background":"#131317","on-error":"#690005","primary-fixed-dim":"#ffb4aa","on-secondary":"#053900","surface":"#131317","outline":"#af8782","surface-bright":"#39393d","secondary-container":"#2ff801","on-background":"#e4e1e7","inverse-surface":"#e4e1e7","tertiary-container":"#c9a900","on-tertiary":"#3a3000","on-surface":"#e4e1e7","secondary-fixed-dim":"#2ae500","on-tertiary-container":"#4c3f00","primary":"#ffb4aa","primary-container":"#e50914","inverse-primary":"#c0000c","error-container":"#93000a","on-tertiary-fixed-variant":"#544600","error":"#ffb4ab","tertiary-fixed":"#ffe16d","on-primary-container":"#fff7f6","tertiary-fixed-dim":"#e9c400","surface-variant":"#353439","on-tertiary-fixed":"#221b00","inverse-on-surface":"#303034","surface-dim":"#131317","secondary-fixed":"#79ff5b","outline-variant":"#5e3f3b","on-secondary-container":"#0f6d00","tertiary":"#e9c400","on-primary-fixed":"#410001","surface-tint":"#ffb4aa","surface-container-high":"#2a292e","surface-container":"#1f1f23","surface-container-low":"#1b1b1f","on-secondary-fixed":"#022100","on-error-container":"#ffdad6","surface-container-lowest":"#0e0e12","surface-container-highest":"#353439","secondary":"#d7ffc5","on-primary":"#690003","on-secondary-fixed-variant":"#095300","primary-fixed":"#ffdad5","on-surface-variant":"#e9bcb6"},"borderRadius":{"DEFAULT":"0.25rem","lg":"0.5rem","xl":"0.75rem","full":"9999px"},"spacing":{"space-sm":"0.5rem","margin-desktop":"3.5rem","gutter":"1rem","space-xs":"0.25rem","space-md":"1rem","margin":"1rem","gutter-desktop":"1.5rem","margin-tablet":"2rem","space-xl":"2.5rem","space-lg":"1.5rem"},"fontFamily":{"label-md":["Space Mono"],"headline-lg":["Space Mono"],"headline-sm":["Space Mono"],"display-hero-mobile":["Space Mono"],"body-sm":["JetBrains Mono"],"body-md":["JetBrains Mono"],"headline-lg-mobile":["Space Mono"],"body-lg":["JetBrains Mono"],"display-hero":["Space Mono"],"label-lg":["Space Mono"],"label-sm":["Space Mono"],"headline-md":["Space Mono"]},"fontSize":{"label-md":["12px",{"lineHeight":"16px","letterSpacing":"1px","fontWeight":"700"}],"headline-lg":["36px",{"lineHeight":"44px","letterSpacing":"0px","fontWeight":"700"}],"headline-sm":["18px",{"lineHeight":"26px","letterSpacing":"0.5px","fontWeight":"700"}],"display-hero-mobile":["32px",{"lineHeight":"40px","letterSpacing":"-0.5px","fontWeight":"700"}],"body-sm":["12px",{"lineHeight":"18px","letterSpacing":"0px","fontWeight":"400"}],"body-md":["14px",{"lineHeight":"20px","letterSpacing":"0px","fontWeight":"400"}],"headline-lg-mobile":["24px",{"lineHeight":"32px","letterSpacing":"0px","fontWeight":"700"}],"body-lg":["16px",{"lineHeight":"24px","letterSpacing":"0px","fontWeight":"400"}],"display-hero":["56px",{"lineHeight":"64px","letterSpacing":"-1px","fontWeight":"700"}],"label-lg":["14px",{"lineHeight":"18px","letterSpacing":"1px","fontWeight":"700"}],"label-sm":["10px",{"lineHeight":"14px","letterSpacing":"1.5px","fontWeight":"700"}],"headline-md":["24px",{"lineHeight":"32px","letterSpacing":"0px","fontWeight":"700"}]}}}};</script></head><body class="bg-surface font-body-md text-on-surface antialiased select-none relative"><div class="fixed inset-0 arcade-scanlines z-50 pointer-events-none opacity-40"></div><header class="fixed top-0 left-0 right-0 w-full z-40 bg-surface-container-lowest/95 backdrop-blur-md shadow-[0_4px_0px_#000000]"><div class="h-20 w-full px-margin-desktop flex items-center justify-between gap-gutter-desktop"><div class="flex items-center gap-space-lg"><a class="flex items-center gap-space-xs group" data-path="billboard" href="#"><div class="bg-primary-container px-space-sm py-space-xs shadow-[2px_2px_0px_#000000]"><span class="font-headline-sm text-headline-sm text-on-primary-container tracking-wider">NETPIX</span></div><span class="font-headline-sm text-headline-sm text-primary-container pixel-cursor">■</span></a><div class="hidden xl:flex items-center gap-space-md pl-space-md bg-surface-container-low px-space-md py-space-xs shadow-[inset_2px_2px_0px_#000000]"><div class="flex flex-col"><span class="font-label-sm text-label-sm text-on-surface-variant">HI-SCORE</span><span class="font-label-md text-label-md text-tertiary">999,990</span></div><div class="flex flex-col"><span class="font-label-sm text-label-sm text-on-surface-variant">STATUS</span><span class="font-label-md text-label-md text-secondary-container">1P READY</span></div><div class="flex flex-col"><span class="font-label-sm text-label-sm text-on-surface-variant">STAGE</span><span class="font-label-md text-label-md text-primary">LVL 99</span></div></div></div><nav class="hidden lg:flex items-center gap-space-xs bg-surface-container-lowest px-space-xs py-space-xs" data-active-classes="bg-surface-container-high text-secondary-fixed shadow-[2px_2px_0px_#000000]"><a aria-current="page" class="px-space-md py-space-sm font-label-md transition-colors tracking-widest uppercase bg-surface-container-high text-secondary-fixed shadow-[2px_2px_0px_#000000]" data-path="billboard" href="#">Billboard</a><a class="px-space-md py-space-sm font-label-md text-label-md text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-colors tracking-widest uppercase" data-path="quests" href="#">Quests</a><a class="px-space-md py-space-sm font-label-md text-label-md text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-colors tracking-widest uppercase" data-path="cartridges" href="#">Cartridges</a><a class="px-space-md py-space-sm font-label-md text-label-md text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-colors tracking-widest uppercase" data-path="soundtracks" href="#">Soundtracks</a><a class="px-space-md py-space-sm font-label-md text-label-md text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-colors tracking-widest uppercase" data-path="leaderboard" href="#">Leaderboard</a></nav><div class="flex items-center gap-space-md"><div class="hidden sm:flex items-center gap-space-xs"><button class="bg-surface-container px-space-sm py-space-xs shadow-[2px_2px_0px_#000000] active:translate-x-0.5 active:translate-y-0.5 hover:bg-surface-container-high hover:text-on-surface" type="button"><span class="font-label-sm text-label-sm text-secondary-container">SFX: ON</span></button><button class="bg-surface-container px-space-sm py-space-xs shadow-[2px_2px_0px_#000000] active:translate-x-0.5 active:translate-y-0.5 hover:bg-surface-container-high hover:text-on-surface" type="button"><span class="font-label-sm text-label-sm text-primary">CRT: ON</span></button></div><div class="bg-surface-container-low px-space-md py-space-xs shadow-[inset_2px_2px_0px_#000000] flex items-center gap-space-xs"><span class="font-label-sm text-label-sm text-on-surface-variant">CREDITS:</span><span class="font-label-md text-label-md text-tertiary-fixed">25¢</span></div><div class="w-8 h-8 rounded-full bg-primary flex items-center justify-center shadow-[2px_2px_0px_#000000]"><span class="material-symbols-outlined text-on-primary text-[18px]">person</span></div></div></div></header><main class="w-full pt-20 bg-surface min-h-screen relative z-10"><div class="flex flex-col w-full text-on-surface select-none pb-space-xl">
+<!-- TOP STATUS MARQUEE & INTERACTIVE SOUND CONTROLLER -->
+<div class="w-full bg-surface-container-lowest border-b-2 border-black px-margin-desktop py-space-xs flex items-center justify-between text-label-sm font-label-sm uppercase tracking-widest text-on-surface-variant">
+<div class="flex items-center gap-space-md">
+<span class="inline-flex items-center gap-space-xs text-secondary-container">
+<span class="w-2 h-2 bg-secondary-container rounded-none animate-pulse"></span>
+        NETPIX-OS V2.4 // CABINET ONLINE
+      </span>
+<span class="text-surface-variant">|</span>
+<span class="hidden md:inline">SYSTEM: NTSC 60FPS</span>
+<span class="text-surface-variant hidden md:inline">|</span>
+<span class="text-tertiary">SERVER: TOKYO-01 [LATENCY: 12MS]</span>
+</div>
+<div class="flex items-center gap-space-md">
+<span class="text-on-surface-variant hidden lg:inline">AUDIO SYNTH:</span>
+<button class="flex items-center gap-space-xs bg-surface-container px-space-sm py-1 shadow-[2px_2px_0px_#000000] text-secondary-container hover:bg-surface-container-high transition-colors" id="sfx-chip-toggle" type="button">
+<span class="material-symbols-outlined text-[14px]">volume_up</span>
+<span id="sfx-chip-status">8-BIT SFX: ACTIVE</span>
+</button>
+<button class="flex items-center gap-space-xs bg-surface-container px-space-sm py-1 shadow-[2px_2px_0px_#000000] text-primary hover:bg-surface-container-high transition-colors" id="crt-toggle-btn" type="button">
+<span class="material-symbols-outlined text-[14px]">tv</span>
+<span>CRT PHOSPHOR: ON</span>
+</button>
+</div>
+</div>
+<!-- SECTION 1: HERO BILLBOARD & CARTRIDGE DECK (Cinematic 16:9 Showcase) -->
+<section class="relative w-full px-margin-desktop pt-space-md pb-space-xl overflow-hidden">
+<!-- Ambient CRT Vignette Backlight -->
+<div class="absolute -top-12 left-1/4 w-96 h-96 bg-primary-container/15 rounded-full blur-[120px] pointer-events-none -z-10"></div>
+<div class="absolute top-1/3 right-10 w-96 h-96 bg-secondary-container/10 rounded-full blur-[140px] pointer-events-none -z-10"></div>
+<!-- Main Arcade Hero Frame -->
+<div class="relative w-full bg-surface-container-lowest shadow-[8px_8px_0px_#000000] p-space-sm lg:p-space-md">
+<!-- Hardware Chassis Bevel Header -->
+<div class="flex items-center justify-between pb-space-sm mb-space-sm px-space-xs">
+<div class="flex items-center gap-space-sm">
+<div class="flex gap-1.5">
+<span class="w-3 h-3 bg-primary-container shadow-[inset_1px_1px_0px_#ffdad5]"></span>
+<span class="w-3 h-3 bg-tertiary-container shadow-[inset_1px_1px_0px_#ffe16d]"></span>
+<span class="w-3 h-3 bg-secondary-container shadow-[inset_1px_1px_0px_#d7ffc5]"></span>
+</div>
+<span class="font-label-sm text-label-sm uppercase tracking-widest text-on-surface-variant pl-space-xs">
+            SLOT 1P // CINEMATIC CART PREVIEW
+          </span>
+</div>
+<div class="flex items-center gap-space-md font-label-sm text-label-sm text-on-surface-variant">
+<span class="bg-surface-container-low px-space-sm py-0.5 shadow-[inset_1px_1px_0px_#000000] text-tertiary-fixed font-bold">ROM: 128 MBIT</span>
+<span class="hidden sm:inline bg-surface-container-low px-space-sm py-0.5 shadow-[inset_1px_1px_0px_#000000] text-secondary-fixed">STEREO SURROUND</span>
+</div>
+</div>
+<!-- Hero Video Display Canvas -->
+<div class="relative w-full min-h-[520px] lg:min-h-[620px] flex flex-col justify-between p-space-md lg:p-space-xl overflow-hidden bg-surface-container-lowest" id="hero-screen-canvas">
+<!-- Dynamic Background Image with Scrim -->
+<div class="absolute inset-0 bg-cover bg-center transition-all duration-300" data-alt="Vibrant 16-bit pixel art cyberpunk cityscape with neon signboards glowing in red and emerald green, retro arcade kids riding bicycles under towering dystopian skyscrapers, dark neon synthwave sunset, high detail arcade canvas illustration." id="hero-bg-poster" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuDjfZchqYZsKEAGWB-Gyz08P3OQoDU-FUpzRE36tIOaHphgWNl2jRmEm0Epfmlkj-B81sn5u01WzaCVnZ8YOzYBMZTPwk-L-1Yxbptely711NAISmJNFb06oXcucAAdBjpre6wXZ3-LVYqCU3m6zeMNUIcASjixNsSss1WVewwZZxUJtsTqw29w7KTSE0vDH0eirKCwZFoWhGUe6b2yMYARM7S3Xw06TkaOThjPO_65cUK42kbyZWCh')"></div>
+<div class="absolute inset-0 bg-gradient-to-t from-surface-container-lowest via-surface-container-lowest/80 to-transparent"></div>
+<div class="absolute inset-0 bg-gradient-to-r from-surface-container-lowest via-surface-container-lowest/70 to-transparent"></div>
+<!-- Upper Floating HUD Chips -->
+<div class="relative z-10 flex flex-wrap items-center gap-space-xs">
+<span class="bg-primary-container text-on-primary-container font-label-md text-label-md px-space-sm py-1 shadow-[2px_2px_0px_#000000] uppercase tracking-wider">
+            ★ NETPIX EXCLUSIVE
+          </span>
+<span class="bg-surface-container-lowest text-secondary-container font-label-md text-label-md px-space-sm py-1 shadow-[2px_2px_0px_#000000]" id="hero-match-badge">
+            99% MATCH
+          </span>
+<span class="bg-surface-container-lowest text-tertiary font-label-md text-label-md px-space-sm py-1 shadow-[2px_2px_0px_#000000]">
+            16-BIT 4K
+          </span>
+<span class="bg-surface-container-high text-on-surface font-label-sm text-label-sm px-space-sm py-1 shadow-[inset_1px_1px_0px_#000000]" id="hero-quest-badge">
+            QUEST IV: ACTIVE
+          </span>
+<span class="hidden md:inline bg-surface-container-lowest text-primary font-label-sm text-label-sm px-space-sm py-1 shadow-[2px_2px_0px_#000000]">
+            EXP: +4500 XP
+          </span>
+</div>
+<!-- Central Story Content & Controls Grid -->
+<div class="relative z-10 grid grid-cols-1 lg:grid-cols-12 gap-space-lg items-end mt-auto pt-space-xl">
+<!-- Left Column: Title, Synopsis & Primary Triggers -->
+<div class="lg:col-span-8 flex flex-col gap-space-md">
+<div class="flex items-center gap-space-sm">
+<span class="material-symbols-outlined text-primary-container text-[20px]">videogame_asset</span>
+<span class="font-label-sm text-label-sm uppercase tracking-widest text-primary-fixed">SEASON 4 // ALL 9 EPISODES UNLOCKED</span>
+</div>
+<h1 class="font-display-hero text-display-hero text-on-surface uppercase tracking-tight drop-shadow-[4px_4px_0px_#000000] leading-none" id="hero-main-title">
+              STRANGER PIXELS 4
+            </h1>
+<p class="font-body-lg text-body-lg text-on-surface-variant max-w-2xl leading-relaxed" id="hero-main-synopsis">
+              When a dark interdimensional pixel entity breaches the Hawkins Arcade, four party members must equip legendary synthesizers and roll for initiative in the upside-down dungeon.
+            </p>
+<!-- Action Buttons Row -->
+<div class="flex flex-wrap items-center gap-space-md pt-space-xs">
+<button class="group relative px-space-lg py-space-sm bg-primary-container text-on-primary-container font-label-lg text-label-lg uppercase tracking-wider shadow-[4px_4px_0px_#000000] active:translate-x-0.5 active:translate-y-0.5 hover:bg-inverse-primary transition-all flex items-center gap-space-sm" id="btn-hero-play" type="button">
+<span class="material-symbols-outlined text-[20px]">play_arrow</span>
+<span>1P START ROM</span>
+</button>
+<button class="px-space-md py-space-sm bg-surface-container text-secondary-fixed font-label-md text-label-md uppercase tracking-wider shadow-[4px_4px_0px_#000000] active:translate-x-0.5 active:translate-y-0.5 hover:bg-surface-container-high transition-all flex items-center gap-space-xs" id="btn-inventory-add" type="button">
+<span class="material-symbols-outlined text-[18px]">add_box</span>
+<span>INVENTORY</span>
+</button>
+<button class="px-space-md py-space-sm bg-surface-container-low text-tertiary font-label-md text-label-md uppercase tracking-wider shadow-[4px_4px_0px_#000000] active:translate-x-0.5 active:translate-y-0.5 hover:bg-surface-container transition-all flex items-center gap-space-xs" id="btn-ost-play" type="button">
+<span class="material-symbols-outlined text-[18px]">music_note</span>
+<span>CHIPTUNE OST</span>
+</button>
+<button class="px-space-sm py-space-sm bg-surface-container-low text-on-surface-variant font-label-md text-label-md uppercase tracking-wider shadow-[4px_4px_0px_#000000] active:translate-x-0.5 active:translate-y-0.5 hover:text-on-surface transition-all flex items-center gap-space-xs" type="button">
+<span class="material-symbols-outlined text-[18px]">info</span>
+<span>SPECS</span>
+</button>
+</div>
+</div>
+<!-- Right Column: Interactive Featured Cartridge Selector Deck -->
+<div class="lg:col-span-4 flex flex-col gap-space-sm bg-surface-container-lowest/90 p-space-md shadow-[4px_4px_0px_#000000]">
+<div class="flex items-center justify-between border-b-2 border-surface-variant pb-space-xs">
+<span class="font-label-sm text-label-sm text-primary uppercase tracking-widest flex items-center gap-space-xs">
+<span class="w-2 h-2 bg-primary"></span> SELECT CARTRIDGE
+              </span>
+<span class="font-label-sm text-label-sm text-on-surface-variant">3 SLOTS</span>
+</div>
+<div class="flex flex-col gap-space-xs" id="cartridge-deck-buttons">
+<!-- Cartridge 1 (Active) -->
+<button class="cartridge-tab active w-full p-space-sm bg-surface-container-high text-left flex items-center justify-between shadow-[2px_2px_0px_#000000] hover:bg-surface-container-highest transition-all group" data-hero-id="stranger" type="button">
+<div class="flex items-center gap-space-sm">
+<div class="w-10 h-10 bg-primary-container flex items-center justify-center font-headline-sm text-on-primary-container shadow-[inset_1px_1px_0px_#ffffff]">01</div>
+<div class="flex flex-col">
+<span class="font-label-md text-label-md text-on-surface group-hover:text-primary transition-colors">STRANGER PIXELS 4</span>
+<span class="font-body-sm text-body-sm text-secondary-container">99% MATCH • SCI-FI QUEST</span>
+</div>
+</div>
+<span class="material-symbols-outlined text-secondary-fixed text-[18px]">arrow_forward</span>
+</button>
+<!-- Cartridge 2 -->
+<button class="cartridge-tab w-full p-space-sm bg-surface-container-low text-left flex items-center justify-between shadow-[2px_2px_0px_#000000] hover:bg-surface-container transition-all group" data-hero-id="cyberpunk" type="button">
+<div class="flex items-center gap-space-sm">
+<div class="w-10 h-10 bg-surface-container flex items-center justify-center font-headline-sm text-tertiary shadow-[inset_1px_1px_0px_#ffffff]">02</div>
+<div class="flex flex-col">
+<span class="font-label-md text-label-md text-on-surface-variant group-hover:text-on-surface transition-colors">CYBERPUNK 198X</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant">97% MATCH • MECHA ACTION</span>
+</div>
+</div>
+<span class="material-symbols-outlined text-on-surface-variant text-[18px]">chevron_right</span>
+</button>
+<!-- Cartridge 3 -->
+<button class="cartridge-tab w-full p-space-sm bg-surface-container-low text-left flex items-center justify-between shadow-[2px_2px_0px_#000000] hover:bg-surface-container transition-all group" data-hero-id="witcher" type="button">
+<div class="flex items-center gap-space-sm">
+<div class="w-10 h-10 bg-surface-container flex items-center justify-center font-headline-sm text-primary shadow-[inset_1px_1px_0px_#ffffff]">03</div>
+<div class="flex flex-col">
+<span class="font-label-md text-label-md text-on-surface-variant group-hover:text-on-surface transition-colors">THE 8-BIT WITCHER</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant">94% MATCH • FANTASY RPG</span>
+</div>
+</div>
+<span class="material-symbols-outlined text-on-surface-variant text-[18px]">chevron_right</span>
+</button>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- SECTION 2: "INSERT COIN TO JOIN" // ONBOARDING TERMINAL -->
+<section class="w-full px-margin-desktop py-space-lg">
+<div class="relative w-full bg-surface-container-low p-space-lg shadow-[6px_6px_0px_#000000] overflow-hidden">
+<!-- Glow effect -->
+<div class="absolute -right-20 -bottom-20 w-80 h-80 bg-secondary-container/10 rounded-full blur-[80px] pointer-events-none"></div>
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-space-xl items-center">
+<!-- Terminal Briefing -->
+<div class="lg:col-span-7 flex flex-col gap-space-sm">
+<div class="flex items-center gap-space-sm">
+<span class="px-space-sm py-0.5 bg-secondary-container text-on-secondary-container font-label-sm text-label-sm font-bold uppercase shadow-[2px_2px_0px_#000000]">
+              INSERT COIN TO JOIN
+            </span>
+<span class="font-label-sm text-label-sm text-tertiary">NO TOKENS NEEDED • CANCEL ANYTIME</span>
+</div>
+<h2 class="font-headline-lg text-headline-lg text-on-surface uppercase tracking-tight">
+            READY PLAYER ONE? SPAWN YOUR STREAMING PASS.
+          </h2>
+<p class="font-body-md text-body-md text-on-surface-variant max-w-xl">
+            Enter your transmitter mail address to unlock 10,000+ uncompressed arcade movies, retro anime OVA runs, and synthwave soundtrack cassettes without hardware lag.
+          </p>
+</div>
+<!-- Interactive Coin-Op Input Slot -->
+<div class="lg:col-span-5 flex flex-col gap-space-sm">
+<div class="p-space-md bg-surface-container-lowest shadow-[inset_3px_3px_0px_#000000]">
+<label class="block font-label-sm text-label-sm text-secondary-container uppercase mb-space-xs" for="player-terminal-email">
+              &gt; TRANSMITTER_MAIL_ADDRESS:
+            </label>
+<div class="flex flex-col sm:flex-row gap-space-xs">
+<input class="w-full bg-surface-container px-space-md py-space-sm font-body-md text-body-md text-secondary-fixed placeholder:text-on-surface-variant focus:outline-none focus:bg-surface-container-high shadow-[inset_2px_2px_0px_#000000] uppercase" id="player-terminal-email" placeholder="PLAYER_ONE@NETPIX.COM" type="email"/>
+<button class="whitespace-nowrap bg-primary-container px-space-lg py-space-sm font-label-md text-label-md uppercase tracking-wider text-on-primary-container shadow-[3px_3px_0px_#000000] active:translate-x-0.5 active:translate-y-0.5 hover:bg-inverse-primary transition-all flex items-center justify-center gap-space-xs" id="btn-insert-coin" type="button">
+<span class="material-symbols-outlined text-[18px]">monetization_on</span>
+<span>INSERT COIN</span>
+</button>
+</div>
+<div class="hidden mt-space-sm p-space-xs bg-secondary-container/20 text-secondary-fixed font-label-sm text-label-sm text-center uppercase" id="coin-success-message">
+              ✦ LEVEL 1 UNLOCKED! COIN REGISTERED. REDIRECTING TO ARCADE HUB...
+            </div>
+</div>
+<div class="flex items-center justify-between px-space-xs text-label-sm font-label-sm text-on-surface-variant">
+<span>STARTING CREDIT: 25¢ FREE TRIAL</span>
+<span class="text-tertiary">100% RETRO SATISFACTION</span>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- SECTION 3: "TOP 10 QUESTS TODAY" (Desktop Pixel-Ranked Showcase) -->
+<section class="w-full px-margin-desktop py-space-xl flex flex-col gap-space-lg">
+<!-- Header with speedrun anchor -->
+<div class="flex flex-col sm:flex-row items-start sm:items-center justify-between gap-space-sm border-b-2 border-surface-variant pb-space-sm">
+<div class="flex items-center gap-space-sm">
+<span class="text-primary-container font-headline-md text-headline-md">🔥</span>
+<h2 class="font-headline-lg text-headline-lg text-on-surface uppercase tracking-tight">
+          TOP 10 QUESTS TODAY
+        </h2>
+</div>
+<a class="font-label-md text-label-md text-tertiary uppercase tracking-wider flex items-center gap-space-xs hover:text-tertiary-fixed transition-colors" href="#">
+<span>VIEW SPEEDRUN LEADERBOARD</span>
+<span class="material-symbols-outlined text-[16px]">arrow_forward</span>
+</a>
+</div>
+<!-- Ranked 5-Column Desktop Grid -->
+<div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-space-md">
+<!-- Card #1 -->
+<div class="quest-card group relative bg-surface-container-low p-space-xs shadow-[4px_4px_0px_#000000] hover:-translate-y-1.5 transition-transform duration-150 cursor-pointer">
+<!-- Giant Pixel Ranking Number -->
+<div class="absolute -top-4 -left-3 z-20 w-12 h-12 bg-tertiary text-on-tertiary font-headline-lg text-headline-lg flex items-center justify-center shadow-[3px_3px_0px_#000000]">
+          #1
+        </div>
+<!-- Poster Art Container -->
+<div class="relative w-full aspect-[2/3] bg-surface-container-lowest overflow-hidden">
+<div class="w-full h-full bg-cover bg-center group-hover:scale-105 transition-transform duration-200" data-alt="Chunky 16-bit pixel art of Squid Game retro tournament participants in green tracksuits standing in front of an ominous giant pixel robot doll under neon red arena floodlights, CRT scanline grain effect." style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuDGijQs32GW0ruy6HY48hEgnIJFPA6pB6WgCzAfgE347j0MzkcsaQm6u6KhdYt2IYhlZp-SfXPQIw3bPeoFmaPN0dH3xHfHzqjnaPIcTfWRhW1f8d7EXzRtSySul8T1mP6i5riW_PcxC6IN5tduBRTf1qS3dxnsVDniDSkBPTfCa6MjxwfNmYth551QA43a35uUFLc58E1TuZN2XXJOPadkQD7vIa52m0KJOhGHQduKsB6jPRhEvSVe')"></div>
+<div class="absolute inset-0 bg-gradient-to-t from-black via-transparent to-transparent opacity-80"></div>
+<div class="absolute top-2 right-2 bg-primary-container text-on-primary-container font-label-sm text-label-sm px-1.5 py-0.5 shadow-[1px_1px_0px_#000000]">
+            DEATHMATCH
+          </div>
+</div>
+<!-- Card Metadata -->
+<div class="p-space-sm flex flex-col gap-1">
+<span class="font-label-md text-label-md text-on-surface uppercase truncate group-hover:text-primary transition-colors">
+            SQUID GAME 8-BIT
+          </span>
+<div class="flex items-center justify-between font-body-sm text-body-sm text-on-surface-variant">
+<span class="text-secondary-fixed">98% MATCH</span>
+<span>9 EPS</span>
+</div>
+</div>
+</div>
+<!-- Card #2 -->
+<div class="quest-card group relative bg-surface-container-low p-space-xs shadow-[4px_4px_0px_#000000] hover:-translate-y-1.5 transition-transform duration-150 cursor-pointer">
+<div class="absolute -top-4 -left-3 z-20 w-12 h-12 bg-tertiary text-on-tertiary font-headline-lg text-headline-lg flex items-center justify-center shadow-[3px_3px_0px_#000000]">
+          #2
+        </div>
+<div class="relative w-full aspect-[2/3] bg-surface-container-lowest overflow-hidden">
+<div class="w-full h-full bg-cover bg-center group-hover:scale-105 transition-transform duration-200" data-alt="Pixel art squad of masked bank robbers in pixelated red jumpsuits inside the Royal Mint surrounded by floating gold tokens, retro bank heist synthwave backdrop, 16-bit arcade rendering." style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuD9w5vTR0scFbDFhdQaUL9JebX8BC7LeUnxmKhqTpVw7kUaclTiuVtPKjAL7DYzOHnRiqTFES9GkX5LTeox1WXTZaoMC_YZ9GVjGof-oVWYb6WMnmaq2kvqIdOy92y1Y3hvrC8Ah0arDRyw5ppTIqeUNBqx0EIG9jyfbEawZq6-QQEWSrQmPV62YRaQwA8RTzJFKOXNH5DVThhbIrc_aqAZCSzg_uxUwwi3a8Ws_YfpJl7rwyDzzcXD')"></div>
+<div class="absolute inset-0 bg-gradient-to-t from-black via-transparent to-transparent opacity-80"></div>
+<div class="absolute top-2 right-2 bg-secondary-container text-on-secondary-container font-label-sm text-label-sm px-1.5 py-0.5 shadow-[1px_1px_0px_#000000]">
+            CO-OP RAID
+          </div>
+</div>
+<div class="p-space-sm flex flex-col gap-1">
+<span class="font-label-md text-label-md text-on-surface uppercase truncate group-hover:text-primary transition-colors">
+            PIXEL HEIST
+          </span>
+<div class="flex items-center justify-between font-body-sm text-body-sm text-on-surface-variant">
+<span class="text-secondary-fixed">96% MATCH</span>
+<span>5 SEASONS</span>
+</div>
+</div>
+</div>
+<!-- Card #3 -->
+<div class="quest-card group relative bg-surface-container-low p-space-xs shadow-[4px_4px_0px_#000000] hover:-translate-y-1.5 transition-transform duration-150 cursor-pointer">
+<div class="absolute -top-4 -left-3 z-20 w-12 h-12 bg-tertiary text-on-tertiary font-headline-lg text-headline-lg flex items-center justify-center shadow-[3px_3px_0px_#000000]">
+          #3
+        </div>
+<div class="relative w-full aspect-[2/3] bg-surface-container-lowest overflow-hidden">
+<div class="w-full h-full bg-cover bg-center group-hover:scale-105 transition-transform duration-200" data-alt="Retro 90s OVA anime pixel art of giant biomechanical purple mecha launching into neo tokyo skies with electric lightning bolts and phosphor green laser displays, retro cinematic animation." style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuA-5NcQQbavTq7dfkEaoiqBQFbmT_XWbF_3X08DYOdbLGdzG1nwOFfBiyVKQOPvH6glqSjN0NoVE1IK4lI3HJ--MA2_znA4Zttw7BZ8U2BDPaZz_CUcqSXcETc97Us3Tji2Dn117iJK6Zq4c1MlKxuZlo6dHai8e1ZcOm9WKSFEqmzhS0UwQmKzkZYxq00uuFtbaE5xOGuj9jrEa162aChTw29mIsgwm9orVlMeXPMtvcEhe5-6_MLW')"></div>
+<div class="absolute inset-0 bg-gradient-to-t from-black via-transparent to-transparent opacity-80"></div>
+<div class="absolute top-2 right-2 bg-surface-bright text-on-surface font-label-sm text-label-sm px-1.5 py-0.5 shadow-[1px_1px_0px_#000000]">
+            OVA ANIME
+          </div>
+</div>
+<div class="p-space-sm flex flex-col gap-1">
+<span class="font-label-md text-label-md text-on-surface uppercase truncate group-hover:text-primary transition-colors">
+            MECHA NEON 2099
+          </span>
+<div class="flex items-center justify-between font-body-sm text-body-sm text-on-surface-variant">
+<span class="text-secondary-fixed">99% MATCH</span>
+<span>26 EPS</span>
+</div>
+</div>
+</div>
+<!-- Card #4 -->
+<div class="quest-card group relative bg-surface-container-low p-space-xs shadow-[4px_4px_0px_#000000] hover:-translate-y-1.5 transition-transform duration-150 cursor-pointer">
+<div class="absolute -top-4 -left-3 z-20 w-12 h-12 bg-tertiary text-on-tertiary font-headline-lg text-headline-lg flex items-center justify-center shadow-[3px_3px_0px_#000000]">
+          #4
+        </div>
+<div class="relative w-full aspect-[2/3] bg-surface-container-lowest overflow-hidden">
+<div class="w-full h-full bg-cover bg-center group-hover:scale-105 transition-transform duration-200" data-alt="Dark fantasy gothic pixel art vampire hunter wielding a whip on a gothic castle battlement under a blood-red moon, bats flying, 16-bit retro horror video game poster." style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuBXfezq5JvTHrEcrpwhxaNRRpLNKgIkGHd1GXe5fQDqsfQ1fuK9My4copcY7RN6m-xXxFLxHR9xSrd-nwGt7Axu24xmW8K8I1Rpy-zGXLsHSkdUeJ6WbLED4qlphVcS-ZT7f_2BzvObxv9beSKtzts1MtcCSRkAy3YFayYI2IPbZSCDfP3GZJFedfPAhXg2HMEG7BWokg9E5R-HkH-bmO1o4PM43sWM1N7vTzQa7FRGzEGiarQAvhhx')"></div>
+<div class="absolute inset-0 bg-gradient-to-t from-black via-transparent to-transparent opacity-80"></div>
+<div class="absolute top-2 right-2 bg-primary-container text-on-primary-container font-label-sm text-label-sm px-1.5 py-0.5 shadow-[1px_1px_0px_#000000]">
+            GOTHIC RPG
+          </div>
+</div>
+<div class="p-space-sm flex flex-col gap-1">
+<span class="font-label-md text-label-md text-on-surface uppercase truncate group-hover:text-primary transition-colors">
+            CASTLE CHRONICLES
+          </span>
+<div class="flex items-center justify-between font-body-sm text-body-sm text-on-surface-variant">
+<span class="text-secondary-fixed">94% MATCH</span>
+<span>12 CARTS</span>
+</div>
+</div>
+</div>
+<!-- Card #5 -->
+<div class="quest-card group relative bg-surface-container-low p-space-xs shadow-[4px_4px_0px_#000000] hover:-translate-y-1.5 transition-transform duration-150 cursor-pointer">
+<div class="absolute -top-4 -left-3 z-20 w-12 h-12 bg-tertiary text-on-tertiary font-headline-lg text-headline-lg flex items-center justify-center shadow-[3px_3px_0px_#000000]">
+          #5
+        </div>
+<div class="relative w-full aspect-[2/3] bg-surface-container-lowest overflow-hidden">
+<div class="w-full h-full bg-cover bg-center group-hover:scale-105 transition-transform duration-200" data-alt="Chunky retro 8-bit maze game with yellow round hero being chased by colorful pixel ghosts through a glowing neon blue labyrinth, arcade marquee cabinet style artwork." style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuD-B7KSkNjwpCNfqoyqARzUMZcXxc7HOFrR3YY9GqHUe9OyOYL5kIb-tUgk5nNT-U0nWkoCtKvww3cmbFB6msPuMzz_rsHJWr8jeJmiIuw4lEbmg9wR8hLduTKbUbJ3TQ1hZc_BW-D7dtTE_u9VgHB10sHxXRygzwkPG8Op2ELFkfD659w3RpdETGec9EDB-6Xu7tOxdd9KY_HzJAkc1aP-jmYgdFXGPSWuk-SvXumYW_53_ZMlNzWS')"></div>
+<div class="absolute inset-0 bg-gradient-to-t from-black via-transparent to-transparent opacity-80"></div>
+<div class="absolute top-2 right-2 bg-tertiary text-on-tertiary font-label-sm text-label-sm px-1.5 py-0.5 shadow-[1px_1px_0px_#000000]">
+            ARCADE LEGEND
+          </div>
+</div>
+<div class="p-space-sm flex flex-col gap-1">
+<span class="font-label-md text-label-md text-on-surface uppercase truncate group-hover:text-primary transition-colors">
+            PAC-MANIA: THE MOVIE
+          </span>
+<div class="flex items-center justify-between font-body-sm text-body-sm text-on-surface-variant">
+<span class="text-secondary-fixed">91% MATCH</span>
+<span>108 MIN</span>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- SECTION 4: "CONTINUE FOR 1P" (Resume In-Progress Stream Quests with HP/EXP Bars) -->
+<section class="w-full px-margin-desktop py-space-lg flex flex-col gap-space-md">
+<div class="flex items-center justify-between border-b-2 border-surface-variant pb-space-xs">
+<div class="flex items-center gap-space-sm">
+<span class="w-3 h-3 bg-secondary-container"></span>
+<h2 class="font-headline-md text-headline-md text-on-surface uppercase tracking-tight">
+          CONTINUE FOR 1P // ACTIVE SAVE SLOTS
+        </h2>
+</div>
+<div class="flex items-center gap-1 text-primary-container font-label-sm text-label-sm">
+<span class="material-symbols-outlined text-[16px]">favorite</span>
+<span class="material-symbols-outlined text-[16px]">favorite</span>
+<span class="material-symbols-outlined text-[16px]">favorite</span>
+<span class="text-on-surface-variant ml-1">3 LIVES LEFT</span>
+</div>
+</div>
+<!-- 3-Column Stream HP Bar Row -->
+<div class="grid grid-cols-1 md:grid-cols-3 gap-space-md">
+<!-- Item 1 -->
+<div class="bg-surface-container-low p-space-md shadow-[4px_4px_0px_#000000] flex flex-col justify-between gap-space-md group">
+<div class="flex gap-space-md items-center">
+<div class="relative w-24 h-20 bg-surface-container-lowest shrink-0 shadow-[2px_2px_0px_#000000] overflow-hidden">
+<div class="w-full h-full bg-cover bg-center" data-alt="Retro 16-bit anime scene with flashing sirens and giant mechanical red bio-robot unit standing ready for launch, Tokyo underground bunker." style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuBGNvOLNkIhRzcwO8VyY0ttByG3eAIl1Vvbutz522Xigrp4ocmJBlcyHFsr0evMSIuPsl2q1hDtsBnu5eJy1PreTWU990iT9Vgk6kZFa8UPpECL_xyy2gXUvK8aRxw8FVGmbAgTYT6mD2kZgqJPruwZXXMzYOuPDO301zyZu6tWCmz-Uwove0ZW-C1Oc0pYzWClzZq2GHcUzgChvkNiiJbJ257s045uTrKv018JBCh5yxxqqytz7XF-')"></div>
+<div class="absolute inset-0 bg-primary-container/20 group-hover:bg-transparent transition-colors"></div>
+</div>
+<div class="flex flex-col min-w-0">
+<span class="font-label-sm text-label-sm text-primary uppercase">EPISODE 18</span>
+<span class="font-label-md text-label-md text-on-surface uppercase truncate">NEON GENESIS '99</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant truncate">"Tokyo-3 Evacuation"</span>
+</div>
+</div>
+<div class="flex flex-col gap-1.5">
+<div class="flex justify-between font-label-sm text-label-sm text-on-surface-variant">
+<span>HP PROGRESS</span>
+<span class="text-secondary-fixed">75% [18:42 REMAINING]</span>
+</div>
+<!-- Segmented Pixel Progress Bar -->
+<div class="w-full h-3 bg-surface-container-lowest p-0.5 shadow-[inset_1px_1px_0px_#000000]">
+<div class="h-full bg-secondary-container w-3/4"></div>
+</div>
+</div>
+<button class="w-full py-space-xs bg-surface-container text-secondary-fixed font-label-sm text-label-sm uppercase tracking-wider shadow-[2px_2px_0px_#000000] active:translate-x-0.5 active:translate-y-0.5 hover:bg-surface-container-high transition-all flex items-center justify-center gap-space-xs" type="button">
+<span class="material-symbols-outlined text-[16px]">play_circle</span>
+<span>RESUME STREAM</span>
+</button>
+</div>
+<!-- Item 2 -->
+<div class="bg-surface-container-low p-space-md shadow-[4px_4px_0px_#000000] flex flex-col justify-between gap-space-md group">
+<div class="flex gap-space-md items-center">
+<div class="relative w-24 h-20 bg-surface-container-lowest shrink-0 shadow-[2px_2px_0px_#000000] overflow-hidden">
+<div class="w-full h-full bg-cover bg-center" data-alt="Cyberpunk detective in pixelated leather trenchcoat walking through neon rainy alleys with holographic advertisements, 16-bit futuristic noir artwork." style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuBAJonn2b7sxOnzJqzjCIHfYZW2He1XvoL83LtLFbX4OpuEt-Ad5zy0Fp98mvTKJXV-Z5JgMAwBVnCoRYsBn9TfCHVO8XnEYdE8BWVQPs5iMQIRXZBrMYsw-4GVOGtKp4xRqfPieXftYinBOYM2FKW4IQTGkJHA4wNzK4NeVapq5HQ6qN6CRv9G7gUyUQcTy9n-E_iSFRGf1ukbvxzQrIBqiGY1cIibPQ5_ld7Ds4-vcxPIUSi8VOQk')"></div>
+<div class="absolute inset-0 bg-secondary-container/20 group-hover:bg-transparent transition-colors"></div>
+</div>
+<div class="flex flex-col min-w-0">
+<span class="font-label-sm text-label-sm text-tertiary uppercase">STAGE 4</span>
+<span class="font-label-md text-label-md text-on-surface uppercase truncate">RETRO RUNNER 2049</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant truncate">"Find the Memory Weaver"</span>
+</div>
+</div>
+<div class="flex flex-col gap-1.5">
+<div class="flex justify-between font-label-sm text-label-sm text-on-surface-variant">
+<span>EXP GAINED</span>
+<span class="text-tertiary">32% [LEVEL 4 / ACT 1]</span>
+</div>
+<div class="w-full h-3 bg-surface-container-lowest p-0.5 shadow-[inset_1px_1px_0px_#000000]">
+<div class="h-full bg-tertiary-container w-[32%]"></div>
+</div>
+</div>
+<button class="w-full py-space-xs bg-surface-container text-tertiary font-label-sm text-label-sm uppercase tracking-wider shadow-[2px_2px_0px_#000000] active:translate-x-0.5 active:translate-y-0.5 hover:bg-surface-container-high transition-all flex items-center justify-center gap-space-xs" type="button">
+<span class="material-symbols-outlined text-[16px]">play_circle</span>
+<span>RESUME STREAM</span>
+</button>
+</div>
+<!-- Item 3 -->
+<div class="bg-surface-container-low p-space-md shadow-[4px_4px_0px_#000000] flex flex-col justify-between gap-space-md group">
+<div class="flex gap-space-md items-center">
+<div class="relative w-24 h-20 bg-surface-container-lowest shrink-0 shadow-[2px_2px_0px_#000000] overflow-hidden">
+<div class="w-full h-full bg-cover bg-center" data-alt="Time machine sports car jumping through lightning temporal dimensional vortex, glowing wheels, 16-bit retro arcade sci-fi visual." style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuAJJn778gO9nEbtJOxqrpa63YpN1KbBOruVhQzgpZ7GDNdJACxXmB4HtvOOmrNMSKy3AN3m1DUN-Zckns_VwSXFa_pulPCUYtr64h7NNQ4dd5aBHI1rOnxiSKaUN4guQ_j7tblqSqhxAdA6m6aNFrlO_PM2HK1l3roBOMYMx-wm8NeYuJcVbqGWQHhUMu9elrrVXMJb6YRBhGPOrl170DZvwjAGdeALlJ8Nwmo3Qg_5sZo-QRR4sHbp')"></div>
+<div class="absolute inset-0 bg-primary-container/20 group-hover:bg-transparent transition-colors"></div>
+</div>
+<div class="flex flex-col min-w-0">
+<span class="font-label-sm text-label-sm text-primary-container uppercase">FINAL BOSS</span>
+<span class="font-label-md text-label-md text-on-surface uppercase truncate">CHRONO DRIFTER</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant truncate">"1995 Time Machine"</span>
+</div>
+</div>
+<div class="flex flex-col gap-1.5">
+<div class="flex justify-between font-label-sm text-label-sm text-on-surface-variant">
+<span>BOSS HP DRAINED</span>
+<span class="text-primary">88% [FINAL PHASE]</span>
+</div>
+<div class="w-full h-3 bg-surface-container-lowest p-0.5 shadow-[inset_1px_1px_0px_#000000]">
+<div class="h-full bg-primary-container w-[88%]"></div>
+</div>
+</div>
+<button class="w-full py-space-xs bg-surface-container text-primary font-label-sm text-label-sm uppercase tracking-wider shadow-[2px_2px_0px_#000000] active:translate-x-0.5 active:translate-y-0.5 hover:bg-surface-container-high transition-all flex items-center justify-center gap-space-xs" type="button">
+<span class="material-symbols-outlined text-[16px]">play_circle</span>
+<span>ENTER BOSS ARENA</span>
+</button>
+</div>
+</div>
+</section>
+<!-- SECTION 5: "GENRE CARTRIDGES" (Desktop 4-Column Physical Cartridge Rack) -->
+<section class="w-full px-margin-desktop py-space-xl flex flex-col gap-space-lg">
+<div class="flex items-center justify-between border-b-2 border-surface-variant pb-space-xs">
+<div>
+<h2 class="font-headline-lg text-headline-lg text-on-surface uppercase tracking-tight">
+          GENRE CARTRIDGES // ROM ARCHIVE
+        </h2>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Browse by physical arcade cartridge genre slots. Click to load sector.</p>
+</div>
+<span class="font-label-sm text-label-sm text-secondary-fixed bg-surface-container-lowest px-space-sm py-1 shadow-[2px_2px_0px_#000000]">
+        TOTAL: 9,740 TITLES
+      </span>
+</div>
+<div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-space-md" id="genre-cart-rack">
+<!-- Cart 1 -->
+<div class="genre-cartridge cursor-pointer bg-surface-container-low p-space-sm shadow-[4px_4px_0px_#000000] hover:-translate-y-2 transition-all flex flex-col">
+<!-- Top Plastic Cartridge Grip Ribs -->
+<div class="w-full h-4 bg-surface-variant flex gap-1 px-2 py-0.5 mb-2 shadow-[inset_1px_1px_0px_#000000]">
+<div class="flex-1 bg-surface-container-lowest"></div>
+<div class="flex-1 bg-surface-container-lowest"></div>
+<div class="flex-1 bg-surface-container-lowest"></div>
+<div class="flex-1 bg-surface-container-lowest"></div>
+<div class="flex-1 bg-surface-container-lowest"></div>
+</div>
+<!-- Cartridge Label -->
+<div class="bg-primary-container p-space-md flex flex-col justify-between h-44 shadow-[inset_2px_2px_0px_#ffdad5]">
+<div class="flex justify-between items-start">
+<span class="font-label-sm text-label-sm bg-black text-on-primary px-1 py-0.5">ACT-01</span>
+<span class="material-symbols-outlined text-black text-[24px]">rocket_launch</span>
+</div>
+<div>
+<h3 class="font-headline-md text-headline-md text-on-primary-container uppercase leading-tight">SCI-FI ARCADE</h3>
+<p class="font-label-sm text-label-sm text-on-primary mt-1">CYBORGS &amp; MEGACITIES</p>
+</div>
+</div>
+<!-- Bottom Pin Connectors -->
+<div class="pt-space-sm flex justify-between items-center text-label-sm font-label-sm text-on-surface-variant">
+<span>3,420 TITLES</span>
+<span class="text-primary font-bold">SLOT IN →</span>
+</div>
+</div>
+<!-- Cart 2 -->
+<div class="genre-cartridge cursor-pointer bg-surface-container-low p-space-sm shadow-[4px_4px_0px_#000000] hover:-translate-y-2 transition-all flex flex-col">
+<div class="w-full h-4 bg-surface-variant flex gap-1 px-2 py-0.5 mb-2 shadow-[inset_1px_1px_0px_#000000]">
+<div class="flex-1 bg-surface-container-lowest"></div>
+<div class="flex-1 bg-surface-container-lowest"></div>
+<div class="flex-1 bg-surface-container-lowest"></div>
+<div class="flex-1 bg-surface-container-lowest"></div>
+<div class="flex-1 bg-surface-container-lowest"></div>
+</div>
+<div class="bg-surface-variant p-space-md flex flex-col justify-between h-44 shadow-[inset_2px_2px_0px_#af8782]">
+<div class="flex justify-between items-start">
+<span class="font-label-sm text-label-sm bg-black text-error px-1 py-0.5">ACT-02</span>
+<span class="material-symbols-outlined text-error text-[24px]">skull</span>
+</div>
+<div>
+<h3 class="font-headline-md text-headline-md text-error uppercase leading-tight">PIXEL HORROR</h3>
+<p class="font-label-sm text-label-sm text-on-surface-variant mt-1">SLASHERS &amp; GHOSTS</p>
+</div>
+</div>
+<div class="pt-space-sm flex justify-between items-center text-label-sm font-label-sm text-on-surface-variant">
+<span>1,280 TITLES</span>
+<span class="text-error font-bold">SLOT IN →</span>
+</div>
+</div>
+<!-- Cart 3 -->
+<div class="genre-cartridge cursor-pointer bg-surface-container-low p-space-sm shadow-[4px_4px_0px_#000000] hover:-translate-y-2 transition-all flex flex-col">
+<div class="w-full h-4 bg-surface-variant flex gap-1 px-2 py-0.5 mb-2 shadow-[inset_1px_1px_0px_#000000]">
+<div class="flex-1 bg-surface-container-lowest"></div>
+<div class="flex-1 bg-surface-container-lowest"></div>
+<div class="flex-1 bg-surface-container-lowest"></div>
+<div class="flex-1 bg-surface-container-lowest"></div>
+<div class="flex-1 bg-surface-container-lowest"></div>
+</div>
+<div class="bg-secondary-container p-space-md flex flex-col justify-between h-44 shadow-[inset_2px_2px_0px_#d7ffc5]">
+<div class="flex justify-between items-start">
+<span class="font-label-sm text-label-sm bg-black text-on-secondary px-1 py-0.5">ACT-03</span>
+<span class="material-symbols-outlined text-black text-[24px]">smart_toy</span>
+</div>
+<div>
+<h3 class="font-headline-md text-headline-md text-on-secondary-container uppercase leading-tight">OVA ANIME</h3>
+<p class="font-label-sm text-label-sm text-on-secondary mt-1">MECHA &amp; MAGICAL</p>
+</div>
+</div>
+<div class="pt-space-sm flex justify-between items-center text-label-sm font-label-sm text-on-surface-variant">
+<span>4,150 TITLES</span>
+<span class="text-secondary-fixed font-bold">SLOT IN →</span>
+</div>
+</div>
+<!-- Cart 4 -->
+<div class="genre-cartridge cursor-pointer bg-surface-container-low p-space-sm shadow-[4px_4px_0px_#000000] hover:-translate-y-2 transition-all flex flex-col">
+<div class="w-full h-4 bg-surface-variant flex gap-1 px-2 py-0.5 mb-2 shadow-[inset_1px_1px_0px_#000000]">
+<div class="flex-1 bg-surface-container-lowest"></div>
+<div class="flex-1 bg-surface-container-lowest"></div>
+<div class="flex-1 bg-surface-container-lowest"></div>
+<div class="flex-1 bg-surface-container-lowest"></div>
+<div class="flex-1 bg-surface-container-lowest"></div>
+</div>
+<div class="bg-tertiary-container p-space-md flex flex-col justify-between h-44 shadow-[inset_2px_2px_0px_#ffe16d]">
+<div class="flex justify-between items-start">
+<span class="font-label-sm text-label-sm bg-black text-on-tertiary px-1 py-0.5">ACT-04</span>
+<span class="material-symbols-outlined text-black text-[24px]">sports_martial_arts</span>
+</div>
+<div>
+<h3 class="font-headline-md text-headline-md text-on-tertiary-container uppercase leading-tight">KUNG-FU 16-BIT</h3>
+<p class="font-label-sm text-label-sm text-on-tertiary mt-1">BRAWLERS &amp; DOJOS</p>
+</div>
+</div>
+<div class="pt-space-sm flex justify-between items-center text-label-sm font-label-sm text-on-surface-variant">
+<span>890 TITLES</span>
+<span class="text-tertiary font-bold">SLOT IN →</span>
+</div>
+</div>
+</div>
+</section>
+<!-- SECTION 6: "SELECT DIFFICULTY LEVEL" (Desktop 3-Column Pricing Matrix) -->
+<section class="w-full px-margin-desktop py-space-xl flex flex-col gap-space-lg">
+<div class="text-center max-w-3xl mx-auto flex flex-col gap-space-xs">
+<span class="font-label-sm text-label-sm text-secondary-container uppercase tracking-widest">
+        COIN-OP PRICING MATRIX
+      </span>
+<h2 class="font-headline-lg text-headline-lg text-on-surface uppercase tracking-tight">
+        SELECT DIFFICULTY LEVEL
+      </h2>
+<p class="font-body-md text-body-md text-on-surface-variant">
+        Switch passes anytime. Instant cloud saves across PC, Web Cabinets, and retro handhelds. Zero microtransactions.
+      </p>
+</div>
+<!-- 3 Tier Desktop Cards -->
+<div class="grid grid-cols-1 md:grid-cols-3 gap-space-lg pt-space-md items-stretch">
+<!-- Plan 1: 1P ROOKIE -->
+<div class="plan-card bg-surface-container-low p-space-lg shadow-[6px_6px_0px_#000000] flex flex-col justify-between gap-space-lg">
+<div class="flex flex-col gap-space-md">
+<div class="flex justify-between items-center">
+<span class="px-space-sm py-1 bg-surface-container-high text-on-surface font-label-sm text-label-sm uppercase">1P MODE</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant">SLOT A</span>
+</div>
+<div>
+<h3 class="font-headline-md text-headline-md text-on-surface uppercase">ROOKIE PASS</h3>
+<div class="flex items-baseline gap-1 mt-1">
+<span class="font-display-hero-mobile text-display-hero-mobile text-on-surface">$6.99</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant">/ MONTH</span>
+</div>
+</div>
+<div class="flex flex-col gap-space-sm pt-space-xs font-body-sm text-body-sm text-on-surface-variant">
+<div class="flex items-center gap-space-xs">
+<span class="material-symbols-outlined text-secondary-fixed text-[18px]">check</span>
+<span>720p Monophonic Chiptune Audio</span>
+</div>
+<div class="flex items-center gap-space-xs">
+<span class="material-symbols-outlined text-secondary-fixed text-[18px]">check</span>
+<span>1 Screen Active Playback</span>
+</div>
+<div class="flex items-center gap-space-xs">
+<span class="material-symbols-outlined text-secondary-fixed text-[18px]">check</span>
+<span>Arcade CRT Emulation Standard</span>
+</div>
+<div class="flex items-center gap-space-xs text-surface-variant">
+<span class="material-symbols-outlined text-[18px]">close</span>
+<span class="line-through">Offline ROM Cartridge Cache</span>
+</div>
+</div>
+</div>
+<button class="plan-select-btn w-full py-space-sm bg-surface-container text-on-surface font-label-md text-label-md uppercase tracking-wider shadow-[3px_3px_0px_#000000] active:translate-x-0.5 active:translate-y-0.5 hover:bg-surface-container-high transition-all" type="button">
+          SELECT ROOKIE
+        </button>
+</div>
+<!-- Plan 2: 2P PRO GAMER (Hero Highlighted) -->
+<div class="plan-card relative bg-surface-container p-space-lg shadow-[8px_8px_0px_#000000] flex flex-col justify-between gap-space-lg -translate-y-2">
+<!-- Floating "MOST POPULAR" Badge -->
+<div class="absolute -top-3.5 left-1/2 -translate-x-1/2 bg-tertiary text-on-tertiary font-label-sm text-label-sm px-space-md py-0.5 uppercase tracking-widest shadow-[2px_2px_0px_#000000] whitespace-nowrap">
+          ★ MOST POPULAR CABINET ★
+        </div>
+<div class="flex flex-col gap-space-md">
+<div class="flex justify-between items-center">
+<span class="px-space-sm py-1 bg-secondary-container text-on-secondary-container font-label-sm text-label-sm uppercase font-bold">2P CO-OP</span>
+<span class="font-label-sm text-label-sm text-tertiary">RECOMMENDED</span>
+</div>
+<div>
+<h3 class="font-headline-md text-headline-md text-tertiary uppercase">PRO GAMER</h3>
+<div class="flex items-baseline gap-1 mt-1">
+<span class="font-display-hero-mobile text-display-hero-mobile text-tertiary">$12.99</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant">/ MONTH</span>
+</div>
+</div>
+<div class="flex flex-col gap-space-sm pt-space-xs font-body-sm text-body-sm text-on-surface">
+<div class="flex items-center gap-space-xs text-secondary-fixed">
+<span class="material-symbols-outlined text-[18px]">check_box</span>
+<span>1080p Stereo 16-Bit Audio Engine</span>
+</div>
+<div class="flex items-center gap-space-xs text-secondary-fixed">
+<span class="material-symbols-outlined text-[18px]">check_box</span>
+<span>2 Simultaneous Co-Op Streams</span>
+</div>
+<div class="flex items-center gap-space-xs text-secondary-fixed">
+<span class="material-symbols-outlined text-[18px]">check_box</span>
+<span>Full Phosphor / Scanline Filter Control</span>
+</div>
+<div class="flex items-center gap-space-xs text-secondary-fixed">
+<span class="material-symbols-outlined text-[18px]">check_box</span>
+<span>Unlimited Offline Cartridge Saves</span>
+</div>
+</div>
+</div>
+<button class="plan-select-btn w-full py-space-sm bg-primary-container text-on-primary-container font-label-md text-label-md uppercase tracking-wider shadow-[4px_4px_0px_#000000] active:translate-x-0.5 active:translate-y-0.5 hover:bg-inverse-primary transition-all" type="button">
+          LOCK IN PRO PASS
+        </button>
+</div>
+<!-- Plan 3: 4P MASTER -->
+<div class="plan-card bg-surface-container-low p-space-lg shadow-[6px_6px_0px_#000000] flex flex-col justify-between gap-space-lg">
+<div class="flex flex-col gap-space-md">
+<div class="flex justify-between items-center">
+<span class="px-space-sm py-1 bg-surface-container-high text-on-surface font-label-sm text-label-sm uppercase">4P SQUAD</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant">SLOT C</span>
+</div>
+<div>
+<h3 class="font-headline-md text-headline-md text-on-surface uppercase">ARCADE MASTER</h3>
+<div class="flex items-baseline gap-1 mt-1">
+<span class="font-display-hero-mobile text-display-hero-mobile text-on-surface">$19.99</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant">/ MONTH</span>
+</div>
+</div>
+<div class="flex flex-col gap-space-sm pt-space-xs font-body-sm text-body-sm text-on-surface-variant">
+<div class="flex items-center gap-space-xs">
+<span class="material-symbols-outlined text-secondary-fixed text-[18px]">check</span>
+<span>4K CRT HDR Surround Chiptune</span>
+</div>
+<div class="flex items-center gap-space-xs">
+<span class="material-symbols-outlined text-secondary-fixed text-[18px]">check</span>
+<span>4 Simultaneous Cabinets Supported</span>
+</div>
+<div class="flex items-center gap-space-xs">
+<span class="material-symbols-outlined text-secondary-fixed text-[18px]">check</span>
+<span>VIP Cloud Saves &amp; Beta Game ROMs</span>
+</div>
+<div class="flex items-center gap-space-xs">
+<span class="material-symbols-outlined text-secondary-fixed text-[18px]">check</span>
+<span>Custom Arcade Cabinet Bezel Overlays</span>
+</div>
+</div>
+</div>
+<button class="plan-select-btn w-full py-space-sm bg-surface-container text-on-surface font-label-md text-label-md uppercase tracking-wider shadow-[3px_3px_0px_#000000] active:translate-x-0.5 active:translate-y-0.5 hover:bg-surface-container-high transition-all" type="button">
+          SELECT MASTER
+        </button>
+</div>
+</div>
+</section>
+<!-- SECTION 7: "FREQUENT CHEAT CODES" (Desktop FAQ Accordion) -->
+<section class="w-full px-margin-desktop py-space-xl flex flex-col gap-space-lg">
+<div class="flex items-center justify-between border-b-2 border-surface-variant pb-space-xs">
+<div class="flex items-center gap-space-sm">
+<span class="material-symbols-outlined text-tertiary text-[24px]">help</span>
+<h2 class="font-headline-lg text-headline-lg text-on-surface uppercase tracking-tight">
+          FREQUENT CHEAT CODES // ARCADE FAQ
+        </h2>
+</div>
+<span class="font-label-sm text-label-sm text-on-surface-variant">PRESS [+] TO DECODE</span>
+</div>
+<div class="flex flex-col gap-space-sm max-w-4xl mx-auto w-full" id="faq-cheat-list">
+<!-- Item 1 -->
+<div class="faq-item bg-surface-container-low shadow-[3px_3px_0px_#000000]">
+<button class="faq-trigger w-full p-space-md text-left flex items-center justify-between hover:bg-surface-container transition-colors" type="button">
+<span class="font-headline-sm text-headline-sm text-on-surface uppercase">WHAT IS NETPIX ARCADE?</span>
+<span class="faq-icon font-headline-sm text-headline-sm text-secondary-container">[+]</span>
+</button>
+<div class="faq-content hidden px-space-md pb-space-md font-body-md text-body-md text-on-surface-variant border-t border-surface-variant/40 pt-space-xs">
+          NETPIX is the world's premier retro streaming service and virtual arcade cabinet. We beam uncompressed 8-bit, 16-bit, and 90s anime OVA classics straight to your desktop browser, smart TVs, or custom Raspberry Pi cabinets with zero frame lag and genuine procedural chiptune audio synthesis.
+        </div>
+</div>
+<!-- Item 2 -->
+<div class="faq-item bg-surface-container-low shadow-[3px_3px_0px_#000000]">
+<button class="faq-trigger w-full p-space-md text-left flex items-center justify-between hover:bg-surface-container transition-colors" type="button">
+<span class="font-headline-sm text-headline-sm text-on-surface uppercase">HOW DO I CANCEL MY COIN PASS?</span>
+<span class="faq-icon font-headline-sm text-headline-sm text-secondary-container">[+]</span>
+</button>
+<div class="faq-content hidden px-space-md pb-space-md font-body-md text-body-md text-on-surface-variant border-t border-surface-variant/40 pt-space-xs">
+          Zero token locks! You can eject your pass in two clicks from your Player Profile menu anytime before the next billing cycle. No coins required, and your cloud save files remain archived in the Netherworld server indefinitely.
+        </div>
+</div>
+<!-- Item 3 -->
+<div class="faq-item bg-surface-container-low shadow-[3px_3px_0px_#000000]">
+<button class="faq-trigger w-full p-space-md text-left flex items-center justify-between hover:bg-surface-container transition-colors" type="button">
+<span class="font-headline-sm text-headline-sm text-on-surface uppercase">CAN I STREAM ON A RETRO HANDHELD OR SMART TV?</span>
+<span class="faq-icon font-headline-sm text-headline-sm text-secondary-container">[+]</span>
+</button>
+<div class="faq-content hidden px-space-md pb-space-md font-body-md text-body-md text-on-surface-variant border-t border-surface-variant/40 pt-space-xs">
+          Affirmative! NETPIX supports native WebOS, Android TV, Steam Deck, Analogue Pocket (via Wi-Fi core), and modern web browsers. All video streams adaptively maintain correct 4:3 or 16:9 pixel aspect ratios without blurry bicubic stretch.
+        </div>
+</div>
+<!-- Item 4 -->
+<div class="faq-item bg-surface-container-low shadow-[3px_3px_0px_#000000]">
+<button class="faq-trigger w-full p-space-md text-left flex items-center justify-between hover:bg-surface-container transition-colors" type="button">
+<span class="font-headline-sm text-headline-sm text-on-surface uppercase">WHAT IS THE CRT PHOSPHOR MODE?</span>
+<span class="faq-icon font-headline-sm text-headline-sm text-secondary-container">[+]</span>
+</button>
+<div class="faq-content hidden px-space-md pb-space-md font-body-md text-body-md text-on-surface-variant border-t border-surface-variant/40 pt-space-xs">
+          Our CRT toggle emulates Sony Trinitron aperture grille scanlines, phosphor persistence, subtle barrel curvature, and chromatic aberration directly inside your graphics card using custom CSS shaders. Toggle it in the top status bar anytime!
+        </div>
+</div>
+</div>
+</section>
+</div>
+<!-- INTERACTIVE WEB AUDIO & DOM JAVASCRIPT CONTROLLER -->
+<script>
+(function() {
+  // 1. Procedural 8-Bit Web Audio Synthesizer (Chiptune Sound FX)
+  let audioCtx = null;
+  let sfxEnabled = true;
+
+  function initAudio() {
+    if (!audioCtx) {
+      const AudioContext = window.AudioContext || window.webkitAudioContext;
+      if (AudioContext) {
+        audioCtx = new AudioContext();
+      }
+    }
+    if (audioCtx && audioCtx.state === 'suspended') {
+      audioCtx.resume();
+    }
+  }
+
+  function playBlip(freq = 440, type = 'square', duration = 0.08, gainVal = 0.08) {
+    if (!sfxEnabled) return;
+    try {
+      initAudio();
+      if (!audioCtx) return;
+      const osc = audioCtx.createOscillator();
+      const gain = audioCtx.createGain();
+      osc.type = type;
+      osc.frequency.setValueAtTime(freq, audioCtx.currentTime);
+      gain.gain.setValueAtTime(gainVal, audioCtx.currentTime);
+      gain.gain.exponentialRampToValueAtTime(0.0001, audioCtx.currentTime + duration);
+      osc.connect(gain);
+      gain.connect(audioCtx.destination);
+      osc.start();
+      osc.stop(audioCtx.currentTime + duration);
+    } catch (e) {
+      // Audio not permitted yet
+    }
+  }
+
+  function playCoinSound() {
+    if (!sfxEnabled) return;
+    try {
+      initAudio();
+      if (!audioCtx) return;
+      const now = audioCtx.currentTime;
+      // High chime step: B5 (987Hz) to E6 (1318Hz)
+      const osc1 = audioCtx.createOscillator();
+      const osc2 = audioCtx.createOscillator();
+      const gain = audioCtx.createGain();
+
+      osc1.type = 'square';
+      osc2.type = 'square';
+      osc1.frequency.setValueAtTime(987.77, now);
+      osc2.frequency.setValueAtTime(1318.51, now + 0.08);
+
+      gain.gain.setValueAtTime(0.12, now);
+      gain.gain.exponentialRampToValueAtTime(0.0001, now + 0.35);
+
+      osc1.connect(gain);
+      osc2.connect(gain);
+      gain.connect(audioCtx.destination);
+
+      osc1.start(now);
+      osc1.stop(now + 0.08);
+      osc2.start(now + 0.08);
+      osc2.stop(now + 0.35);
+    } catch (e) {}
+  }
+
+  // 2. SFX and CRT Toggles
+  const sfxToggleBtn = document.getElementById('sfx-chip-toggle');
+  const sfxStatusLabel = document.getElementById('sfx-chip-status');
+  if (sfxToggleBtn && sfxStatusLabel) {
+    sfxToggleBtn.addEventListener('click', () => {
+      sfxEnabled = !sfxEnabled;
+      sfxStatusLabel.textContent = sfxEnabled ? '8-BIT SFX: ACTIVE' : '8-BIT SFX: MUTED';
+      sfxToggleBtn.classList.toggle('text-secondary-container', sfxEnabled);
+      sfxToggleBtn.classList.toggle('text-on-surface-variant', !sfxEnabled);
+      if (sfxEnabled) {
+        playBlip(600, 'triangle', 0.1);
+      }
+    });
+  }
+
+  const crtToggleBtn = document.getElementById('crt-toggle-btn');
+  const scanlineOverlay = document.querySelector('.arcade-scanlines');
+  let crtActive = true;
+  if (crtToggleBtn) {
+    crtToggleBtn.addEventListener('click', () => {
+      crtActive = !crtActive;
+      playBlip(crtActive ? 800 : 300, 'square', 0.05);
+      if (scanlineOverlay) {
+        scanlineOverlay.style.display = crtActive ? 'block' : 'none';
+      }
+      crtToggleBtn.querySelector('span:last-child').textContent = crtActive ? 'CRT PHOSPHOR: ON' : 'CRT PHOSPHOR: OFF';
+      crtToggleBtn.classList.toggle('text-primary', crtActive);
+      crtToggleBtn.classList.toggle('text-on-surface-variant', !crtActive);
+    });
+  }
+
+  // 3. Dynamic Hero Cartridge Switcher
+  const heroData = {
+    stranger: {
+      title: "STRANGER PIXELS 4",
+      synopsis: "When a dark interdimensional pixel entity breaches the Hawkins Arcade, four party members must equip legendary synthesizers and roll for initiative in the upside-down dungeon.",
+      match: "99% MATCH",
+      quest: "QUEST IV: ACTIVE",
+      bgAlt: "Vibrant 16-bit pixel art cyberpunk cityscape with neon signboards glowing in red and emerald green, retro arcade kids riding bicycles under towering dystopian skyscrapers, dark neon synthwave sunset, high detail arcade canvas illustration."
+    },
+    cyberpunk: {
+      title: "CYBERPUNK 198X",
+      synopsis: "A rogue decker in 1980s Neo-Kowloon uncovers a corporate conspiracy threatening to erase the city's analog memories. Jack in with 16-bit military chrome implants.",
+      match: "97% MATCH",
+      quest: "ACT II: CORPORATE RAID",
+      bgAlt: "Retro 16-bit pixel art cyberpunk back-alley in rain with red and teal neon signs, trenchcoat cyborg standing next to futuristic motor hovercraft, gritty high-contrast pixel landscape."
+    },
+    witcher: {
+      title: "THE 8-BIT WITCHER",
+      synopsis: "Toss a silver token to your pixel slayer. Track legendary mythological beasts across isometric 16-bit swamps, craft chiptune alchemy potions, and protect the realm.",
+      match: "94% MATCH",
+      quest: "CONTRACT: STRIGA BOSS",
+      bgAlt: "Isometric dark fantasy pixel art castle courtyard with white-haired monster hunter holding a glowing silver sword facing a giant pixel gryphon under stormy moonlight."
+    }
+  };
+
+  const cartTabs = document.querySelectorAll('.cartridge-tab');
+  const heroMainTitle = document.getElementById('hero-main-title');
+  const heroMainSynopsis = document.getElementById('hero-main-synopsis');
+  const heroMatchBadge = document.getElementById('hero-match-badge');
+  const heroQuestBadge = document.getElementById('hero-quest-badge');
+  const heroBgPoster = document.getElementById('hero-bg-poster');
+
+  cartTabs.forEach(tab => {
+    tab.addEventListener('click', () => {
+      const heroId = tab.getAttribute('data-hero-id');
+      const data = heroData[heroId];
+      if (!data) return;
+
+      playBlip(750, 'square', 0.08);
+
+      // Update styling
+      cartTabs.forEach(t => {
+        t.classList.remove('bg-surface-container-high', 'active');
+        t.classList.add('bg-surface-container-low');
+      });
+      tab.classList.add('bg-surface-container-high', 'active');
+      tab.classList.remove('bg-surface-container-low');
+
+      // Update Hero Content
+      if (heroMainTitle) heroMainTitle.textContent = data.title;
+      if (heroMainSynopsis) heroMainSynopsis.textContent = data.synopsis;
+      if (heroMatchBadge) heroMatchBadge.textContent = data.match;
+      if (heroQuestBadge) heroQuestBadge.textContent = data.quest;
+      if (heroBgPoster) {
+        heroBgPoster.setAttribute('data-alt', data.bgAlt);
+      }
+    });
+  });
+
+  // 4. Hero Action Sound Triggers
+  const btnHeroPlay = document.getElementById('btn-hero-play');
+  if (btnHeroPlay) {
+    btnHeroPlay.addEventListener('click', () => {
+      playCoinSound();
+    });
+  }
+
+  const btnInventoryAdd = document.getElementById('btn-inventory-add');
+  if (btnInventoryAdd) {
+    btnInventoryAdd.addEventListener('click', () => {
+      playBlip(520, 'triangle', 0.1);
+      btnInventoryAdd.classList.toggle('text-secondary-fixed');
+      btnInventoryAdd.classList.toggle('text-tertiary-fixed');
+    });
+  }
+
+  const btnOstPlay = document.getElementById('btn-ost-play');
+  if (btnOstPlay) {
+    btnOstPlay.addEventListener('click', () => {
+      playBlip(880, 'sine', 0.15);
+    });
+  }
+
+  // 5. Onboarding Coin Slot Interaction
+  const btnInsertCoin = document.getElementById('btn-insert-coin');
+  const emailInput = document.getElementById('player-terminal-email');
+  const coinSuccessMsg = document.getElementById('coin-success-message');
+
+  if (btnInsertCoin) {
+    btnInsertCoin.addEventListener('click', () => {
+      playCoinSound();
+      if (coinSuccessMsg) {
+        coinSuccessMsg.classList.remove('hidden');
+        if (emailInput && emailInput.value.trim() === '') {
+          emailInput.value = 'PLAYER_ONE@NETPIX.COM';
+        }
+      }
+    });
+  }
+
+  // 6. FAQ Accordion Logic
+  const faqItems = document.querySelectorAll('.faq-item');
+  faqItems.forEach(item => {
+    const trigger = item.querySelector('.faq-trigger');
+    const content = item.querySelector('.faq-content');
+    const icon = item.querySelector('.faq-icon');
+
+    if (trigger && content && icon) {
+      trigger.addEventListener('click', () => {
+        const isHidden = content.classList.contains('hidden');
+        playBlip(isHidden ? 640 : 420, 'square', 0.05);
+
+        content.classList.toggle('hidden');
+        icon.textContent = isHidden ? '[-]' : '[+]';
+        icon.classList.toggle('text-primary', isHidden);
+        icon.classList.toggle('text-secondary-container', !isHidden);
+      });
+    }
+  });
+
+  // 7. Interactive Feedback for Cartridge Slots and Plans
+  const genreCarts = document.querySelectorAll('.genre-cartridge');
+  genreCarts.forEach(cart => {
+    cart.addEventListener('click', () => {
+      playBlip(620, 'triangle', 0.08);
+    });
+  });
+
+  const planButtons = document.querySelectorAll('.plan-select-btn');
+  planButtons.forEach(btn => {
+    btn.addEventListener('click', () => {
+      playCoinSound();
+    });
+  });
+
+  const questCards = document.querySelectorAll('.quest-card');
+  questCards.forEach(card => {
+    card.addEventListener('mouseenter', () => {
+      playBlip(320, 'sine', 0.04, 0.02);
+    });
+  });
+})();
+</script></main><footer class="w-full bg-surface-container-lowest py-space-xl relative z-10 shadow-[0_-4px_0px_#000000]"><div class="w-full px-margin-desktop flex flex-col md:flex-row items-center justify-between gap-space-lg"><div class="flex flex-col gap-space-xs text-center md:text-left"><div class="flex items-center justify-center md:justify-start gap-space-sm"><span class="font-label-md text-label-md text-primary-container">NETPIX ENTERTAINMENT CORP.</span><span class="font-body-sm text-body-sm text-on-surface-variant">© 1983-2025</span></div><p class="font-body-sm text-body-sm text-on-surface-variant">EASTER EGG DETECTED: [↑ ↑ ↓ ↓ ← → ← → B A START]</p></div><div class="flex flex-wrap items-center justify-center gap-space-md"><a class="font-label-sm text-label-sm text-on-surface-variant hover:text-secondary-fixed transition-colors tracking-widest uppercase" data-path="privacy-rom" href="#">Privacy ROM</a><span class="text-surface-variant">■</span><a class="font-label-sm text-label-sm text-on-surface-variant hover:text-secondary-fixed transition-colors tracking-widest uppercase" data-path="terms-of-play" href="#">Terms of Play</a><span class="text-surface-variant">■</span><a class="font-label-sm text-label-sm text-on-surface-variant hover:text-secondary-fixed transition-colors tracking-widest uppercase" data-path="leaderboard" href="#">Speedrun Leaderboard</a><span class="text-surface-variant">■</span><span class="font-label-sm text-label-sm text-tertiary">SYSTEM: READY (NTSC)</span></div></div></footer></body></html>
